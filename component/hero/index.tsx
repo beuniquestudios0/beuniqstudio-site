@@ -20,7 +20,7 @@ const Hero: NextPage = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar non ligula sit amet ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu elit a metus mattis iaculis. Maecenas lectus ante, tincidunt sed ex in, feugiat hendrerit mi. Sed vitae fringilla orci. Praesent suscipit commodo metus eu finibus.                </Text>
                 <Text my={"1rem"} fontSize={"lg"}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar non ligula sit amet ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu elit a metus mattis iaculis. Maecenas lectus ante, tincidunt sed ex in, feugiat hendrerit mi. Sed vitae fringilla orci. Praesent suscipit commodo metus eu finibus.                </Text>
-                <Button colorScheme={"brandPrimary"} size={"lg"}>
+                <Button my={"1rem"} colorScheme={"brandPrimary"} size={"lg"}>
                     Book your seat now
                 </Button>
             </Box>
