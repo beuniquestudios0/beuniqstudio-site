@@ -39,7 +39,7 @@ const BaseNavbar = () => {
 const Index: NextPage = () => {
 
     return <>
-        <Flex bg={"brandPrimary.300"} color={"white"} px={"1rem"} py={".5rem"} alignItems={"center"} justify={"space-between"} >
+        <Flex flexDirection={"row-reverse"} bg={"brandPrimary.300"} color={"white"} px={"1rem"} py={".5rem"} alignItems={"center"} justify={"space-between"} >
             <Flex alignItems={"center"}  gridGap={".3rem"} fontSize={"3xl"}>
                 <FaPhoneAlt/>
                 <Flex flexDirection={"column"}>
