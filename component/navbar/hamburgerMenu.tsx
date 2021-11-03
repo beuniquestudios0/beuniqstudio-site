@@ -40,6 +40,11 @@ const HamburgerMenu: NextPage<{isOpen: boolean, onClose: () => void}> = ({isOpen
                     </Box>
                     <Box _active={{bg:"brandPrimary.50", color:"brandPrimary.600"}} borderRadius={"6px"} p={".5rem"}>
                         <Text fontSize={"lg"}>
+                            Our Programs
+                        </Text>
+                    </Box>
+                    <Box _active={{bg:"brandPrimary.50", color:"brandPrimary.600"}} borderRadius={"6px"} p={".5rem"}>
+                        <Text fontSize={"lg"}>
                             Contact us
                         </Text>
                     </Box>
