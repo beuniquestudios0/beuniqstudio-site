@@ -1,5 +1,5 @@
 import {NextPage} from "next";
-import {Flex, Box, Heading, Text, Grid, Button} from "@chakra-ui/react";
+import {Flex, Box, Heading, Text, Grid, Button, Badge} from "@chakra-ui/react";
 
 // COMPONENT
 import HeroImages from "component/hero/heroImages";
@@ -9,11 +9,11 @@ const Hero: NextPage = () => {
         <Grid my={"3rem"} mx={["1rem", "3rem"]} templateColumns={{base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)"}} gap={6}>
             <Box>
                 <Heading d={{md: "none"}} size="xl">
-                    1:1 Online MUSIC CLASSES
+                    <Badge variant={"solid"} colorScheme={"brandPrimary"}><Heading size="2xl">1:1</Heading></Badge> Online MUSIC CLASSES
                     TAILOR-MADE for YOU.
                 </Heading>
                 <Heading d={{base: "none", md: "block"}} size="2xl">
-                    1:1 Online MUSIC CLASSES
+                    <Badge variant={"solid"} colorScheme={"brandPrimary"}><Heading size="2xl">1:1</Heading></Badge> Online MUSIC CLASSES
                     TAILOR-MADE for YOU.
                 </Heading>
                 <Text my={"1rem"} fontSize={"lg"}>

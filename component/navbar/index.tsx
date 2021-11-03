@@ -55,7 +55,7 @@ const Index: NextPage = () => {
         </Flex>
         <Flex alignItems={"center"} justify={"space-between"} p={"1rem"}>
             <Box w={["50px", "80px"]} h={["50px", "80px"]}>
-                <img src={"https://i.ibb.co/yVyxj8v/medium-logo.png"} width={"100%"} height={"100%"}/>
+                <img src={"https://i.ibb.co/RNF7gR7/LOGO.png"} width={"100%"} height={"100%"}/>
             </Box>
             <Flex d={{base:"flex", lg: "none"}} alignItems={"center"} gridGap={"1rem"}>
                 <BaseNavbar/>
