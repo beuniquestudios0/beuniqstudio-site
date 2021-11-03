@@ -36,8 +36,8 @@ const BaseNavbar = () => {
             </Flex>
         </Flex>
 
-        <Box d={{md: "none"}}>
-            <IconButton aria-label={"Menu"} colorScheme={"brandPrimary"} onClick={onHamburgerMenuOpen}>
+        <Box d={{lg: "none"}}>
+            <IconButton aria-label={"Menu"} colorScheme={"brandPrimary"} size={"lg"} onClick={onHamburgerMenuOpen}>
                 <FiMenu/>
             </IconButton>
         </Box>
@@ -53,10 +53,10 @@ const Index: NextPage = () => {
             <Box w={["50px", "80px"]} h={["50px", "80px"]}>
                 <img src={"https://i.ibb.co/yVyxj8v/medium-logo.png"} width={"100%"} height={"100%"}/>
             </Box>
-            <Flex d={{base:"flex", md: "none"}} alignItems={"center"} gridGap={"1rem"}>
+            <Flex d={{base:"flex", lg: "none"}} alignItems={"center"} gridGap={"1rem"}>
                 <BaseNavbar/>
             </Flex>
-            <Flex d={["none", 'flex']} alignItems={"center"}>
+            <Flex d={{base: "none", lg: "flex"}} alignItems={"center"}>
                 <Box _hover={{bg:"brandPrimary.50", color:"brandPrimary.600"}} cursor={"pointer"} borderRadius={"6px"} px={"1rem"} py={".5rem"}>
                     <Text fontSize={"lg"}>
                         Home
@@ -73,7 +73,7 @@ const Index: NextPage = () => {
                     </Text>
                 </Box>
             </Flex>
-            <Flex  d={["none", 'flex']} alignItems={"center"} gridGap={"1rem"}>
+            <Flex  d={{base: "none", lg: "flex"}} alignItems={"center"} gridGap={"1rem"}>
                 <Flex flexDirection={"column"} alignItems={"center"}>
                     <Flex alignItems={"center"}  gridGap={".3rem"} fontSize={"3xl"}>
                         <FaPhoneAlt/>

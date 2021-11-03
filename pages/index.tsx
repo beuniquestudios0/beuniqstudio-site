@@ -3,6 +3,7 @@ import Head from 'next/head'
 import {Box, Text, Heading} from "@chakra-ui/react";
 
 // COMPONENTS
+import Hero from "component/hero";
 
 // LAYOUT
 import DefaultLayout from "layout/default";
@@ -17,7 +18,9 @@ const Home: NextPage = () => {
         <title>John Sede</title>
         <meta name="description" content="John sede" />
       </Head>
+      <Hero/>
     </Box>
+
   )
 }
 
