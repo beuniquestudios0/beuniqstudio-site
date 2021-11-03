@@ -3,7 +3,13 @@ import Head from 'next/head'
 import {Box, Text, Heading} from "@chakra-ui/react";
 
 // COMPONENTS
-import Navbar from "component/navbar"
+
+// LAYOUT
+import DefaultLayout from "layout/default";
+
+// TYPES
+import PageWithLayoutType from "../pageWithLayout";
+
 const Home: NextPage = () => {
   return (
     <Box>
@@ -11,9 +17,10 @@ const Home: NextPage = () => {
         <title>John Sede</title>
         <meta name="description" content="John sede" />
       </Head>
-        <Navbar/>
     </Box>
   )
 }
+
+(Home as PageWithLayoutType).layout = DefaultLayout;
 
 export default Home

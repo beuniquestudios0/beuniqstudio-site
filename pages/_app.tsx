@@ -1,13 +1,19 @@
 import { ChakraProvider } from "@chakra-ui/react"
-import {AppProps} from "next/app";
 
 // CHAKRA THEME
 import customTheme from "../theme";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
+// TYPES
+import {AppLayoutProps} from "../types";
+
+function MyApp({ Component, pageProps }: AppLayoutProps) {
+    const Layout = Component.layout || (({ children }) => <>{children}</>);
+
+    return (
       <ChakraProvider theme={customTheme}>
-        <Component {...pageProps} />
+          <Layout>
+              <Component {...pageProps} />
+          </Layout>
       </ChakraProvider>
   )
 }
