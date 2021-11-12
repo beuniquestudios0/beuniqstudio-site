@@ -6,6 +6,7 @@ import {Box, Text, Heading} from "@chakra-ui/react";
 import Hero from "component/hero";
 import Why from "component/why";
 import PrivateLesson from "component/PrivateLesson";
+import SummerCamp from "component/SummerCamp";
 
 // LAYOUT
 import DefaultLayout from "layout/default";
@@ -22,7 +23,7 @@ const Home: NextPage = () => {
       </Head>
       <Hero/>
       <PrivateLesson/>
-      {/*<Why/>*/}
+      <SummerCamp/>
     </Box>
 
   )
