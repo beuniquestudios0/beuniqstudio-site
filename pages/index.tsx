@@ -4,6 +4,7 @@ import {Box, Text, Heading} from "@chakra-ui/react";
 
 // COMPONENTS
 import Hero from "component/hero";
+import Why from "component/why";
 
 // LAYOUT
 import DefaultLayout from "layout/default";
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
         <meta name="description" content="John sede" />
       </Head>
       <Hero/>
+      <Why/>
     </Box>
 
   )

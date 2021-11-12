@@ -7,7 +7,7 @@ import {ReactChild} from "react";
 import Navbar from "component/navbar"
 const DefaultLayout: NextPage<{children: ReactChild}> = ({children}) => {
     return (
-        <Box>
+        <Box w={"full"}>
             <Head>
                 <title>John Sede</title>
                 <meta name="description" content="John sede" />
