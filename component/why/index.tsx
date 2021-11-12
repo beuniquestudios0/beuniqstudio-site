@@ -3,7 +3,7 @@ import {Box, Heading, Grid, Flex, Text} from "@chakra-ui/react";
 
 const Why: NextPage = ( ) => {
     return <>
-    <Box margin={"3rem 0"}  py={"2rem"} px={["1rem", "3rem"]}>
+    <Box bg={"brandPrimary.50"} margin={"3rem 0"}  py={"2rem"} px={["1rem", "3rem"]}>
         <Heading textAlign={"center"}>WHY Be Unique Studios?</Heading>
 
         <Grid mt={"2rem"} templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)"]} gap={1}>
@@ -27,11 +27,12 @@ const Why: NextPage = ( ) => {
 
             <Flex _hover={{
                 bg:"white",
+                color: "heading",
                 boxShadow:"xl",
                 "& > div": {
                     bg: "brandPrimary.50"
                 }
-            }} bg={"brandPrimary.50"} p={"1rem"} borderRadius={"8px"} transition={"all .5s linear"} flexDirection={"column"} alignItems={"center"} justify={"center"} gridGap={".4rem"}>
+            }} color={"white"} bg={"brandPrimary.400"} p={"1rem"} borderRadius={"8px"} transition={"all .5s linear"} flexDirection={"column"} alignItems={"center"} justify={"center"} gridGap={".4rem"}>
                 <Box w={"100px"} h={"100px"} bg={"white"} borderRadius={"50%"} p={"1rem"} transition={"all .5s linear"}>
                     <img src={"https://cdn-icons-png.flaticon.com/512/2883/2883939.png"} alt={"1:1"} style={{
                         width: "100%",

@@ -13,7 +13,7 @@ const SummerCamp = () => {
                     <Box  w={["100%", "60%", "50%"]} h={["100%", "400px"]}>
                         <ChilderenPlaylingBlob width={"100%"} height={"100%"}/>
                     </Box>
-                    <Flex position={"relative"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"}  gridGap={".3rem"} w={["100%", "40%", "50%"]}  >
+                    <Flex position={"relative"} bg={"white"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"}  gridGap={".3rem"} w={["100%", "40%", "50%"]}  >
                         <Flex zIndex={20} flexDirection={"column"} justifyContent={"center"} textAlign={{base: "left", lg:"center"}} gridGap={".3rem"}  w={["100%"]} >
                             <Heading color={"brandPrimary.500"} as={"h3"}>
                                 Summer Camp for Students
