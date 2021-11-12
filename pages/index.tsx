@@ -7,6 +7,7 @@ import Hero from "component/hero";
 import Why from "component/why";
 import PrivateLesson from "component/PrivateLesson";
 import SummerCamp from "component/SummerCamp";
+import MusicGroups from "component/MusicGroups";
 
 // LAYOUT
 import DefaultLayout from "layout/default";
@@ -24,6 +25,8 @@ const Home: NextPage = () => {
       <Hero/>
       <PrivateLesson/>
       <SummerCamp/>
+      <MusicGroups/>
+      <Why/>
     </Box>
 
   )

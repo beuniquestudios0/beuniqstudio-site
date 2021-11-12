@@ -16,7 +16,7 @@ const SummerCamp = () => {
                     <Flex position={"relative"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"}  gridGap={".3rem"} w={["100%", "40%", "50%"]}  >
                         <Flex zIndex={20} flexDirection={"column"} justifyContent={"center"} textAlign={{base: "left", lg:"center"}} gridGap={".3rem"}  w={["100%"]} >
                             <Heading color={"brandPrimary.500"} as={"h3"}>
-                                Summer Arts Garden
+                                Summer Camp for Students
                             </Heading>
                             <Text fontWeight={"medium"} mt={"1rem"}>
                                 We offers full-day and half-day music camps for kids of all ages and skill levels – including beginners!
