@@ -75,7 +75,9 @@ const  JoinOurTeam = () => {
     const toast = useToast();
 
 
-    const fontSize = useBreakpointValue({base: "lg", md: "2xl"})
+    const fontSize = useBreakpointValue({base: "lg", md: "2xl"});
+    const size = useBreakpointValue({ base: 'md', md: 'lg' });
+
 
     const { getRootProps, getRadioProps } = useRadioGroup({
         name: "framework",
@@ -185,7 +187,7 @@ const  JoinOurTeam = () => {
                                     key={avatar.name}
                                     name={avatar.name}
                                     src={avatar.url}
-                                    size={useBreakpointValue({ base: 'md', md: 'lg' })}
+                                    size={size}
                                     position={'relative'}
                                     zIndex={2}
                                     _before={{
@@ -214,8 +216,8 @@ const  JoinOurTeam = () => {
                             bg={'gray.800'}
                             color={'white'}
                             rounded={'full'}
-                            width={useBreakpointValue({ base: '44px', md: '60px' })}
-                            height={useBreakpointValue({ base: '44px', md: '60px' })}
+                            width={{ base: '44px', md: '60px' }}
+                            height={{ base: '44px', md: '60px' }}
                             position={'relative'}
                             _before={{
                                 content: '""',
