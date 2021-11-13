@@ -1,6 +1,8 @@
 import {Button, Flex, Heading, Text} from "@chakra-ui/react";
+import {useRouter} from "next/router";
 
 const PrivateLesson = () => {
+    const router = useRouter()
     return <>
     <Flex gridGap={".3rem"} bg={"brandPrimary.400"} color={"white"} h={"100%"} padding={"2rem 0"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-evenly"}>
         <Heading>
@@ -9,7 +11,7 @@ const PrivateLesson = () => {
         <Text textAlign={"center"}>
             We offer music education for individuals of just about every age and skill level.
         </Text>
-        <Button colorScheme={"white"} variant={"outline"}>
+        <Button  onClick={() => router.push("/booking")} colorScheme={"white"} variant={"outline"}>
             Learn More
         </Button>
     </Flex>

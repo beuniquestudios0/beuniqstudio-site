@@ -10,8 +10,10 @@ import {
     useColorModeValue,
     createIcon,
 } from '@chakra-ui/react';
+import {useRouter} from "next/router";
 
 export default function HeroText() {
+    const router = useRouter();
     return (
         <>
             <Head>
@@ -50,12 +52,11 @@ export default function HeroText() {
                             rounded={'full'}
                             px={6}
                             _hover={{
-                                bg: 'green.500',
-                            }}>
+                                bg: 'brandPrimary.700',
+                            }}
+                            onClick={() => router.push("/booking")}
+                        >
                             Get Started
-                        </Button>
-                        <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
-                            Learn more
                         </Button>
                         <Box>
                             <Icon

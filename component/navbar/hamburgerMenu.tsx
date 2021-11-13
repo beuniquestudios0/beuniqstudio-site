@@ -11,8 +11,10 @@ import {
 import {AiFillFacebook, AiFillInstagram, AiFillYoutube} from "react-icons/ai";
 import {IoLogoYoutube} from "react-icons/io";
 import React from "react";
+import {useRouter} from "next/router";
 
 const HamburgerMenu: NextPage<{isOpen: boolean, onClose: () => void}> = ({isOpen, onClose}) => {
+    const router = useRouter();
     return <>
         <Drawer
             isOpen={isOpen}
@@ -50,7 +52,7 @@ const HamburgerMenu: NextPage<{isOpen: boolean, onClose: () => void}> = ({isOpen
                     </Box>
                 </Flex>
 
-                <Button mt={"1rem"} w={"100%"} colorScheme={"brandPrimary"}>Book your seat now</Button>
+                <Button onClick={() => router.push("/booking")} mt={"1rem"} w={"100%"} colorScheme={"brandPrimary"}>Book your seat now</Button>
 
                 </DrawerBody>
 

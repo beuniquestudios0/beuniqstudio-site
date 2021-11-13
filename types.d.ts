@@ -6,24 +6,14 @@ type AppLayoutProps = {
     pageProps: any
 }
 
-type POST = {
-    _id?:string,
-    title: string,
-    content: string,
-    coverPicture: string,
-    author: string,
-    published: boolean,
-    integrations: string[],
-    scheduledAt: string,
-    updatedAt: string,
+type Message = {
+    id: number;
+    inserted_at: string;
+    message: string;
+    user_id: string;
+    channel_id: number;
+    author: { username: string };
 }
 
 
-interface USER {
-    firstName: string;
-    lastName: string;
-    profilePictureUrl: string;
-}
-
-
-export {AppLayoutProps, POST, USER}
+export {AppLayoutProps,Message}

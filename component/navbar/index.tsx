@@ -6,15 +6,10 @@ import {
     MenuButton,
     MenuList,
     MenuItem,
-    MenuItemOption,
-    MenuGroup,
-    MenuOptionGroup,
-    MenuIcon,
-    MenuCommand,
-    MenuDivider,
     useDisclosure, Button, IconButton
 } from "@chakra-ui/react";
 import React from "react";
+import {useRouter} from "next/router";
 
 // COMPONENTS
 import HamburgerMenu from "component/navbar/hamburgerMenu";
@@ -22,6 +17,7 @@ import HamburgerMenu from "component/navbar/hamburgerMenu";
 
 const BaseNavbar = () => {
     const { isOpen: isHamburgerMenuOpen, onOpen: onHamburgerMenuOpen, onClose: onHamburgerMenuClose } = useDisclosure()
+
 
     return <>
         <HamburgerMenu isOpen={isHamburgerMenuOpen}  onClose={onHamburgerMenuClose}/>
@@ -37,6 +33,7 @@ const BaseNavbar = () => {
 
 
 const Index: NextPage = () => {
+    const router = useRouter();
 
     return <>
         <Flex zIndex={50} position={{base:"relative", lg: "absolute"}} w={"100%"} bg={{base: "brandPrimary.400", lg:"transparent"}} alignItems={"center"} justify={"space-between"} p={"1rem"}>
@@ -69,7 +66,8 @@ const Index: NextPage = () => {
                         Contact us
                     </Text>
                 </Box>
-                <Button colorScheme={"brandPrimary"} size={"lg"}> Book your seat now </Button>
+                <Button colorScheme={"brandPrimary"} size={"lg"} onClick={() => router.push("/booking")}
+                > Book your seat now </Button>
 
             </Flex>
         </Flex>
