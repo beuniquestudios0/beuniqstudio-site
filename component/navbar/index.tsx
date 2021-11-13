@@ -45,27 +45,23 @@ const Index: NextPage = () => {
             </Flex>
             <Flex d={{base: "none", lg: "flex"}} alignItems={"center"} gridGap={".4rem"} color={{base: "default", lg: "white"}}>
                 <Box transition={"all .3s linear"} _hover={{bg:"brandPrimary.50", color:"brandPrimary.600"}} cursor={"pointer"} borderRadius={"6px"} px={"1rem"} py={".5rem"}>
-                    <Text fontSize={"lg"}>
+                    <Text fontWeight={"semibold"} fontSize={"lg"}>
                         Home
                     </Text>
                 </Box>
                 <Box transition={"all .3s linear"} _hover={{bg:"brandPrimary.50", color:"brandPrimary.600"}} cursor={"pointer"} borderRadius={"6px"} px={"1rem"} py={".5rem"}>
                     <Menu>
-                        <MenuButton as={Text}>
-                            Actions
+                        <MenuButton as={Text} fontWeight={"semibold"}>
+                            Our Training
                         </MenuButton>
                         <MenuList>
-                            <MenuItem  color={"heading"}>Program 1</MenuItem>
-                            <MenuItem  color={"heading"}>Program 2</MenuItem>
-                            <MenuItem  color={"heading"}>Program 3</MenuItem>
+                            <MenuItem  color={"heading"}>Guitar</MenuItem>
+                            <MenuItem  color={"heading"}>Paino</MenuItem>
+                            <MenuItem  color={"heading"}>Drums</MenuItem>
                         </MenuList>
                     </Menu>
                 </Box>
-                <Box transition={"all .3s linear"} _hover={{bg:"brandPrimary.50", color:"brandPrimary.600"}} cursor={"pointer"} borderRadius={"6px"} px={"1rem"} py={".5rem"}>
-                    <Text fontSize={"lg"}>
-                        Contact us
-                    </Text>
-                </Box>
+
                 <Button colorScheme={"brandPrimary"} size={"lg"} onClick={() => router.push("/booking")}
                 > Book your seat now </Button>
 

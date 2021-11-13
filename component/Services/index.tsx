@@ -6,7 +6,7 @@ const Services = () => {
     return <>
         <Container maxW={"container.xl"}>
             <Stack spacing={2} align={'center'}>
-                <Heading size={"2xl"} color={"brandPrimary.500"}>Our Services</Heading>
+                <Heading size={"2xl"} color={"brandPrimary.500"}>Training We Offer</Heading>
                 <Text>We conduct classes on the below instruments.</Text>
             </Stack>
             <Grid gridGap={"1rem"} templateColumns={["1fr", "repeat(3, 1fr)"]}>
