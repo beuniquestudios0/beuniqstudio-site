@@ -337,7 +337,7 @@ const  JoinOurTeam = () => {
 
 export default JoinOurTeam;
 
-export const Blur: React.FC = (props: IconProps) => {
+export const Blur: React.FC<any> = (props: any) => {
     return (
         <Icon
             width={useBreakpointValue({ base: '100%', md: '40vw', lg: '30vw' })}
