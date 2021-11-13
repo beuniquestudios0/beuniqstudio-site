@@ -46,9 +46,9 @@ const HamburgerMenu: NextPage<{isOpen: boolean, onClose: () => void}> = ({isOpen
                                 Our Training
                             </MenuButton>
                             <MenuList>
-                                <MenuItem  color={"heading"}>Guitar</MenuItem>
-                                <MenuItem  color={"heading"}>Paino</MenuItem>
-                                <MenuItem  color={"heading"}>Drums</MenuItem>
+                                <MenuItem onClick={() => router.push("/guitar")}  color={"heading"}>Guitar</MenuItem>
+                                <MenuItem onClick={() => router.push("/paino")}  color={"heading"}>Paino</MenuItem>
+                                <MenuItem onClick={() => router.push("/drums")}  color={"heading"}>Drums</MenuItem>
                             </MenuList>
                         </Menu>
                     </Box>
