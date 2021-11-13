@@ -23,11 +23,12 @@ import {
     useToast, IconProps
 } from '@chakra-ui/react';
 import {useRadioGroup} from "@chakra-ui/radio";
+import {AiOutlineArrowLeft} from "react-icons/ai";
 import React, {ReactNode, SyntheticEvent, useState} from "react";
 import supabase from "../supabase";
 import Lottie from "react-lottie";
 import animationData from "assets/lottie/success_lottie.json";
-
+import {useRouter} from "next/router";
 
 
 // COMPONENTS
@@ -73,6 +74,7 @@ const  JoinOurTeam = () => {
 
     const { isOpen, onOpen, onClose } = useDisclosure();
     const toast = useToast();
+    const router = useRouter();
 
 
     const fontSize = useBreakpointValue({base: "lg", md: "2xl"});
@@ -161,6 +163,9 @@ const  JoinOurTeam = () => {
 
     return (
         <Box  position={'relative'}>
+            <Button onClick={() => router.push("/")} d={["none", "block"]} position={"absolute"} top={8} right={10} leftIcon={<AiOutlineArrowLeft/>} variant={"outline"} colorScheme={"brandPrimary"}>
+                Go back
+            </Button>
             <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
@@ -188,7 +193,7 @@ const  JoinOurTeam = () => {
             <Container
                 as={SimpleGrid}
                 maxW={'7xl'}
-                columns={{ base: 1, md: 2 }}
+                columns={{ base: 1, lg: 2 }}
                 spacing={{ base: 10, lg: 32 }}
                 py={{ base: 10, sm: 20, lg: 32 }}>
                 <Stack >

@@ -63,12 +63,10 @@ const ServiceCards: React.FC<{title: string; src: string; time: string[]}> = (pr
                             </Tr>
                         </Thead>
                         <Tbody>
-                            {["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"].map((days: string, index: number) =>
-                                <Tr >
-                                    <Td>{days}</Td>
-                                    <Td>{props.time[index]} Hours</Td>
-                                </Tr>
-                            )}
+                            <Tr>
+                                <Td>Mon - Fri</Td>
+                                <Td>2 Hours</Td>
+                            </Tr>
                         </Tbody>
                     </Table>
                 </Stack>
