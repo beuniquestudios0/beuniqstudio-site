@@ -24,7 +24,7 @@ import {
     useToast
 } from '@chakra-ui/react';
 import {useRadioGroup} from "@chakra-ui/radio";
-import {ReactNode, useState} from "react";
+import React, {ReactNode, useState} from "react";
 import supabase from "../supabase";
 import Lottie from "react-lottie";
 import animationData from "assets/lottie/success_lottie.json";
@@ -337,7 +337,7 @@ const  JoinOurTeam = () => {
 
 export default JoinOurTeam;
 
-export const Blur = (props: IconProps) => {
+export const Blur: React.FC = (props: IconProps) => {
     return (
         <Icon
             width={useBreakpointValue({ base: '100%', md: '40vw', lg: '30vw' })}
