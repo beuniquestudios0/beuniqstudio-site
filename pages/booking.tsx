@@ -13,16 +13,25 @@ import {
     useBreakpointValue,
     IconProps,
     Icon, HStack,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+    useDisclosure,
+    useToast
 } from '@chakra-ui/react';
 import {useRadioGroup} from "@chakra-ui/radio";
 import {ReactNode, useState} from "react";
 import supabase from "../supabase";
+import Lottie from "react-lottie";
+import animationData from "assets/lottie/success_lottie.json";
+
 
 // COMPONENTS
 import RadioCard from "component/ServiceRadio";
-
-// TYPES
-import {Message} from "../types";
 
 const avatars = [
     {
@@ -60,7 +69,11 @@ export default function JoinOurTeam() {
         email:"",
         phone:"",
         instrument:""
-    })
+    });
+
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const toast = useToast();
+
 
     const fontSize = useBreakpointValue({base: "lg", md: "2xl"})
 
@@ -71,6 +84,14 @@ export default function JoinOurTeam() {
     })
 
     const group = getRootProps();
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: "xMidYMid slice",
+        },
+    };
 
     const handleChange = (event: any) => {
         setUser((user: USER) => ({...user, [event.target.name]: event.target.value}))
@@ -78,18 +99,73 @@ export default function JoinOurTeam() {
 
     const handleSubmit = async () => {
         try {
+            let error = "";
+            Object.entries(user).map((entry: string[]) => {
+                if(!entry[1]){
+                    error = entry[0];
+                    return;
+                }
+            });
+
+            if(error){
+                toast({
+                    status: "error",
+                    title: `${error} field is required`,
+                    description: `Please fill the ${error} field to procced further.`,
+                    duration: 2500,
+                    isClosable: true,
+                    position: "top-right"
+                })
+                return;
+            }
+
             const { data } = await supabase
                 .from<USER & {id: number; created_at: string}>('users')
                 .insert(user);
+            setUser({
+                fullname:"",
+                email:"",
+                phone:"",
+                instrument:""
+            });
+            onOpen();
 
-            console.log({data});
         }catch (error: any){
-            console.log(error)
+            toast({
+                status: "error",
+                title: "Something went wrong, try again.",
+                isClosable: true,
+                duration: 2000
+            })
         }
     }
 
     return (
         <Box  position={'relative'}>
+            <Modal isOpen={isOpen} onClose={onClose}>
+                <ModalOverlay />
+                <ModalContent>
+                    <ModalHeader>Details Submitted.</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                        <Box textAlign="center" px={6}>
+                            <Lottie options={defaultOptions} height={200} width={200} />
+                            <Heading as="h2" size="xl">
+                                We Received Your Details.
+                            </Heading>
+                            <Text fontWeight={"semibold"} color={'gray.500'}>
+                               Thank you for your interest. We will get in touch with in few hours.
+                            </Text>
+                        </Box>
+                    </ModalBody>
+
+                    <ModalFooter>
+                        <Button colorScheme="brandPrimary" variant={"ghost"} mr={3} onClick={onClose}>
+                            Close
+                        </Button>
+                    </ModalFooter>
+                </ModalContent>
+            </Modal>
             <Container
                 as={SimpleGrid}
                 maxW={'7xl'}
