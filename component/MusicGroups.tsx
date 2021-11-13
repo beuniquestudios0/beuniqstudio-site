@@ -14,7 +14,7 @@ const Group: React.FC<{bg?: string; src: string; title: string, description: str
 }
 
 const MusicGroups = () => {
-    return <Box margin={"2rem 0"} padding={"2rem 0"}>
+    return <Box margin={"1rem 0"} padding={"2rem 0"}>
         <Container maxW={"container.xl"}>
             <Heading color={"brandPrimary.500"} textAlign={"center"}>Music Groups</Heading>
             <Text fontSize={"xl"} fontWeight={"semibold"} fontStyle={"italic"} color={"brandPrimary.500"} textAlign={"center"}>for</Text>

@@ -10,6 +10,7 @@ import SummerCamp from "component/SummerCamp";
 import MusicGroups from "component/MusicGroups";
 import TeachersList from "component/Teachers";
 import Footer from "component/Footers";
+import Services from "component/Services";
 
 // LAYOUT
 import DefaultLayout from "layout/default";
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
       <Hero/>
       <PrivateLesson/>
       <SummerCamp/>
+      <Services/>
       <MusicGroups/>
       <Why/>
       <TeachersList/>
