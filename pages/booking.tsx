@@ -340,8 +340,8 @@ export default JoinOurTeam;
 export const Blur: React.FC<any> = (props: any) => {
     return (
         <Icon
-            width={useBreakpointValue({ base: '100%', md: '40vw', lg: '30vw' })}
-            zIndex={useBreakpointValue({ base: -1, md: -1, lg: 0 })}
+            width={{ base: -1, md: -1, lg: 0 }}
+            zIndex={{ base: -1, md: -1, lg: 0 }}
             height="560px"
             viewBox="0 0 528 560"
             fill="none"
