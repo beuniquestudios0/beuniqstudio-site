@@ -63,7 +63,7 @@ interface USER {
     instrument:string
 }
 
-export default function JoinOurTeam() {
+const  JoinOurTeam = () => {
     const [user, setUser] = useState<USER>({
         fullname: "",
         email:"",
@@ -334,6 +334,8 @@ export default function JoinOurTeam() {
         </Box>
     );
 }
+
+export default JoinOurTeam;
 
 export const Blur = (props: IconProps) => {
     return (
