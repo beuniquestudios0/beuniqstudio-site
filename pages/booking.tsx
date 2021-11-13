@@ -20,7 +20,7 @@ import {
     ModalBody,
     ModalCloseButton,
     useDisclosure,
-    useToast
+    useToast, IconProps
 } from '@chakra-ui/react';
 import {useRadioGroup} from "@chakra-ui/radio";
 import React, {ReactNode, SyntheticEvent, useState} from "react";
@@ -254,6 +254,7 @@ const  JoinOurTeam = () => {
                 </Stack>
                 <Stack
                     bg={'gray.50'}
+                    boxShadow={"lg"}
                     rounded={'xl'}
                     p={{ base: 4, sm: 6, md: 8 }}
                     spacing={{ base: 8 }}
@@ -350,20 +351,23 @@ const  JoinOurTeam = () => {
                 position={'absolute'}
                 top={-10}
                 left={-10}
-                zIndex={-20}
+                zIndex={-10}
                 style={{ filter: 'blur(70px)' }}
             />
+
         </Box>
     );
 }
 
 export default JoinOurTeam;
 
-export const Blur: React.FC<any> = (props: any) => {
+export const Blur = (props: IconProps) => {
+    const width = useBreakpointValue({ base: '100%', md: '40vw', lg: '30vw' });
+    const zIndex = useBreakpointValue({ base: -1, md: -1, lg: 0 });
     return (
         <Icon
-            width={{ base: -1, md: -1, lg: 0 }}
-            zIndex={{ base: -1, md: -1, lg: 0 }}
+            width={width}
+            zIndex={zIndex}
             height="560px"
             viewBox="0 0 528 560"
             fill="none"
