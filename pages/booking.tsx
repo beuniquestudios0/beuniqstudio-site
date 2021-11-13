@@ -113,14 +113,16 @@ const  JoinOurTeam = () => {
                 }
 
                 if(entry[0] === "email"){
-                    email.test(entry[1]);
-                    error = `please enter valid ${entry[0]}`;
+                    if(!email.test(entry[1])) {
+                        error = `please enter valid ${entry[0]}`;
+                    }
                     return;
                 }
 
                 if(entry[0] === "phone"){
-                    phone.test(entry[1]);
-                    error = `please enter valid ${entry[0]}`;
+                    if(!phone.test(entry[1])) {
+                        error = `please enter valid ${entry[0]}`;
+                    }
                     return;
                 }
             });
@@ -143,7 +145,7 @@ const  JoinOurTeam = () => {
                 fullname:"",
                 email:"",
                 phone:"",
-                instrument:""
+                instrument:"Guitar"
             });
             onOpen();
 
@@ -314,7 +316,6 @@ const  JoinOurTeam = () => {
                                 }}
                                 required
                             />
-                            <small>Phone number without country code</small>
                             <Text>Select Your Instrument</Text>
                             <HStack {...group}>
                                 {["Guitar", "Drums", "Paino"].map((value) => {
