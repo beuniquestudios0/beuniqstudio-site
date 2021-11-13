@@ -8,6 +8,7 @@ import Why from "component/why";
 import PrivateLesson from "component/PrivateLesson";
 import SummerCamp from "component/SummerCamp";
 import MusicGroups from "component/MusicGroups";
+import TeachersList from "component/Teachers";
 
 // LAYOUT
 import DefaultLayout from "layout/default";
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
       <SummerCamp/>
       <MusicGroups/>
       <Why/>
+      <TeachersList/>
     </Box>
 
   )
