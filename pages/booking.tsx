@@ -11,7 +11,6 @@ import {
     Avatar,
     AvatarGroup,
     useBreakpointValue,
-    IconProps,
     Icon, HStack,
     Modal,
     ModalOverlay,
@@ -24,10 +23,11 @@ import {
     useToast
 } from '@chakra-ui/react';
 import {useRadioGroup} from "@chakra-ui/radio";
-import React, {ReactNode, useState} from "react";
+import React, {ReactNode, SyntheticEvent, useState} from "react";
 import supabase from "../supabase";
 import Lottie from "react-lottie";
 import animationData from "assets/lottie/success_lottie.json";
+
 
 
 // COMPONENTS
@@ -68,7 +68,7 @@ const  JoinOurTeam = () => {
         fullname: "",
         email:"",
         phone:"",
-        instrument:""
+        instrument:"Guitar"
     });
 
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -100,11 +100,27 @@ const  JoinOurTeam = () => {
     };
 
     const handleSubmit = async () => {
+
         try {
             let error = "";
+            const  email =  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            const phone =  /^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[6789]\d{9}|(\d[ -]?){10}\d$/;
+
             Object.entries(user).map((entry: string[]) => {
                 if(!entry[1]){
-                    error = entry[0];
+                    error = `${entry[0]} field is required`;
+                    return;
+                }
+
+                if(entry[0] === "email"){
+                    email.test(entry[1]);
+                    error = `please enter valid ${entry[0]}`;
+                    return;
+                }
+
+                if(entry[0] === "phone"){
+                    phone.test(entry[1]);
+                    error = `please enter valid ${entry[0]}`;
                     return;
                 }
             });
@@ -112,11 +128,10 @@ const  JoinOurTeam = () => {
             if(error){
                 toast({
                     status: "error",
-                    title: `${error} field is required`,
-                    description: `Please fill the ${error} field to procced further.`,
+                    title: `${error}`,
+                    description: `Please fill the ${error} field to proceed further.`,
                     duration: 2500,
                     isClosable: true,
-                    position: "top-right"
                 })
                 return;
             }
@@ -271,6 +286,7 @@ const  JoinOurTeam = () => {
                                 _placeholder={{
                                     color: 'gray.500',
                                 }}
+                                required
                             />
                             <Input
                                 placeholder="Email"
@@ -283,6 +299,7 @@ const  JoinOurTeam = () => {
                                 _placeholder={{
                                     color: 'gray.500',
                                 }}
+                                required
                             />
                             <Input
                                 placeholder="Phone Number"
@@ -295,7 +312,9 @@ const  JoinOurTeam = () => {
                                 _placeholder={{
                                     color: 'gray.500',
                                 }}
+                                required
                             />
+                            <small>Phone number without country code</small>
                             <Text>Select Your Instrument</Text>
                             <HStack {...group}>
                                 {["Guitar", "Drums", "Paino"].map((value) => {
@@ -323,7 +342,7 @@ const  JoinOurTeam = () => {
                             Submit
                         </Button>
                     </Box>
-                    form
+
                 </Stack>
             </Container>
             <Blur
