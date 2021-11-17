@@ -16,7 +16,6 @@ const Services = () => {
                 <ServiceCards path={"/tabla"} title={"Tabla"} src={"https://images.unsplash.com/photo-1568219656418-15c329312bf1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"} time={["2", "2","2", "2","2", "2", "leave"]} />
                 <ServiceCards path={"/voilin"} title={"Voilin"} src={"https://images.unsplash.com/photo-1621368286550-f54551f39b91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"} time={["2", "2","2", "2","2", "2", "leave"]} />
                 <ServiceCards path={"/logicpro"} title={"Logic Pro Music Production"} src={"https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"} time={["2", "2","2", "2","2", "2", "leave"]} />
-
             </Grid>
         </Container>
     </>

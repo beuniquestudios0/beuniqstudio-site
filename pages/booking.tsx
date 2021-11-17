@@ -323,7 +323,7 @@ const  JoinOurTeam = () => {
                                 required
                             />
                             <Text>Select Your Instrument</Text>
-                            <HStack {...group}>
+                            <Flex gridGap={"10px"} flexWrap={"wrap"} {...group}>
                                 {["Guitar", "Drums", "Paino", "Voilin", "Tabla", "Logic Pro"].map((value) => {
                                     const radio = getRadioProps({ value })
                                     return (
@@ -332,7 +332,7 @@ const  JoinOurTeam = () => {
                                         </RadioCard>
                                     )
                                 })}
-                            </HStack>
+                            </Flex>
                         </Stack>
                         <Button
                             fontFamily={'heading'}
