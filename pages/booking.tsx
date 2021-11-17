@@ -324,7 +324,7 @@ const  JoinOurTeam = () => {
                             />
                             <Text>Select Your Instrument</Text>
                             <HStack {...group}>
-                                {["Guitar", "Drums", "Paino"].map((value) => {
+                                {["Guitar", "Drums", "Paino", "Voilin", "Tabla", "Logic Pro"].map((value) => {
                                     const radio = getRadioProps({ value })
                                     return (
                                         <RadioCard key={value} {...radio}>
