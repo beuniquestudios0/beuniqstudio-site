@@ -1,6 +1,7 @@
 import React from "react";
 import {Box, Button, Flex, Heading, Image, Text, useBreakpointValue} from "@chakra-ui/react";
 import Slider from "react-slick";
+import {useRouter} from "next/router";
 
 
 // STYLES
@@ -15,6 +16,7 @@ const HeroCaoursal: React.FC = () => {
     const textSize = useBreakpointValue({ base: 'xl', md: '2xl' });
     const buttonSize = useBreakpointValue({ base: 'md', md: 'lg' });
 
+    const router = useRouter();
 
     const settings = {
         infinite: true,
@@ -46,7 +48,7 @@ const HeroCaoursal: React.FC = () => {
                 <Flex justifyContent={"center"} gridGap={[".5rem","1rem"]} alignItems={"center"} flexDirection={"column"} color={"white"}>
                     <Heading as={"h1"} fontWeight={"bold"} size={headingSize}>Music For Everyone</Heading>
                     <Text fontSize={textSize}>Awaken the possibility</Text>
-                    <Button colorScheme={"yellow"} size={buttonSize} variant={"solid"}>Start Learning</Button>
+                    <Button colorScheme={"yellow"} size={buttonSize} onClick={() => router.push("/booking")} variant={"solid"}>Start Learning</Button>
                 </Flex>
             </Box>
         </Box>
