@@ -17,8 +17,10 @@ import {
     TableCaption, Button,
 } from '@chakra-ui/react';
 import React from "react";
+import {useRouter} from "next/router";
 
-const ServiceCards: React.FC<{title: string; src: string; time: string[]}> = (props) => {
+const ServiceCards: React.FC<{title: string; src: string; time: string[], path: string}> = (props) => {
+    const router = useRouter();
     return (
         <Center py={6}>
             <Box
@@ -71,7 +73,7 @@ const ServiceCards: React.FC<{title: string; src: string; time: string[]}> = (pr
                     </Table>
                 </Stack>
                 <Center>
-                    <Button margin={"1rem 0"} variant={"outline"} size={"sm"}  colorScheme={"brandPrimary"}>Explore</Button>
+                    <Button onClick={() => router.push(`/${props.path}`)} margin={"1rem 0"} variant={"outline"} size={"sm"}  colorScheme={"brandPrimary"}>Explore</Button>
                 </Center>
             </Box>
         </Center>

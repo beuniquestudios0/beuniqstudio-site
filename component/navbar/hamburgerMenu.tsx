@@ -12,6 +12,7 @@ import {AiFillFacebook, AiFillInstagram, AiFillYoutube} from "react-icons/ai";
 import {IoLogoYoutube} from "react-icons/io";
 import React from "react";
 import {useRouter} from "next/router";
+import Link from "next/link";
 
 const HamburgerMenu: NextPage<{isOpen: boolean, onClose: () => void}> = ({isOpen, onClose}) => {
     const router = useRouter();
@@ -36,9 +37,11 @@ const HamburgerMenu: NextPage<{isOpen: boolean, onClose: () => void}> = ({isOpen
 
                 <Flex flexDirection={"column"}  gridGap={".1rem"}>
                     <Box _active={{bg:"brandPrimary.50", color:"brandPrimary.600"}} borderRadius={"6px"} p={".5rem"}>
-                        <Text fontSize={"lg"}>
-                            Home
-                        </Text>
+                        <Link href={"/"}>
+                            <Text fontWeight={"semibold"} fontSize={"lg"}>
+                                Home
+                            </Text>
+                        </Link>
                     </Box>
                     <Box _active={{bg:"brandPrimary.50", color:"brandPrimary.600"}} borderRadius={"6px"} p={".5rem"}>
                         <Menu>
@@ -49,6 +52,9 @@ const HamburgerMenu: NextPage<{isOpen: boolean, onClose: () => void}> = ({isOpen
                                 <MenuItem onClick={() => router.push("/guitar")}  color={"heading"}>Guitar</MenuItem>
                                 <MenuItem onClick={() => router.push("/paino")}  color={"heading"}>Paino</MenuItem>
                                 <MenuItem onClick={() => router.push("/drums")}  color={"heading"}>Drums</MenuItem>
+                                <MenuItem onClick={() => router.push("/tabla")}  color={"heading"}>Tabla</MenuItem>
+                                <MenuItem onClick={() => router.push("/voilin")}  color={"heading"}>Voilin</MenuItem>
+                                <MenuItem onClick={() => router.push("/logicpro")}  color={"heading"}>Logic Pro</MenuItem>
                             </MenuList>
                         </Menu>
                     </Box>

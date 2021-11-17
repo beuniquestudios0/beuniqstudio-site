@@ -18,7 +18,6 @@ const Hero: React.FC<{type: string, src: string}> = ({type, src}) => {
                  top={top}
                  transform={'translate(0%, -50%)'}
                  zIndex={40}
-
             >
                 <Flex justifyContent={"center"} gridGap={[".5rem","1rem"]} alignItems={"center"} flexDirection={"column"} color={"white"}>
                     <Heading as={"h1"} fontWeight={"bold"} size={headingSize}>Our {type} Training</Heading>

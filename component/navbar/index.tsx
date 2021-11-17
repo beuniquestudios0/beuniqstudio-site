@@ -8,16 +8,22 @@ import {
     MenuItem,
     useDisclosure, Button, IconButton
 } from "@chakra-ui/react";
-import React from "react";
+import React, {useEffect} from "react";
 import {useRouter} from "next/router";
+import Link from "next/link"
 
 // COMPONENTS
 import HamburgerMenu from "component/navbar/hamburgerMenu";
 
 
 const BaseNavbar = () => {
-    const { isOpen: isHamburgerMenuOpen, onOpen: onHamburgerMenuOpen, onClose: onHamburgerMenuClose } = useDisclosure()
+    const { isOpen: isHamburgerMenuOpen, onOpen: onHamburgerMenuOpen, onClose: onHamburgerMenuClose } = useDisclosure();
 
+    const router = useRouter();
+
+    useEffect(() => {
+        onHamburgerMenuClose();
+    },[router.pathname]);
 
     return <>
         <HamburgerMenu isOpen={isHamburgerMenuOpen}  onClose={onHamburgerMenuClose}/>
@@ -45,9 +51,11 @@ const Index: NextPage = () => {
             </Flex>
             <Flex d={{base: "none", lg: "flex"}} alignItems={"center"} gridGap={".4rem"} color={{base: "default", lg: "white"}}>
                 <Box transition={"all .3s linear"} _hover={{bg:"brandPrimary.50", color:"brandPrimary.600"}} cursor={"pointer"} borderRadius={"6px"} px={"1rem"} py={".5rem"}>
-                    <Text fontWeight={"semibold"} fontSize={"lg"}>
-                        Home
-                    </Text>
+                   <Link href={"/"}>
+                        <Text fontWeight={"semibold"} fontSize={"lg"}>
+                            Home
+                        </Text>
+                   </Link>
                 </Box>
                 <Box transition={"all .3s linear"} _hover={{bg:"brandPrimary.50", color:"brandPrimary.600"}} cursor={"pointer"} borderRadius={"6px"} px={"1rem"} py={".5rem"}>
                     <Menu>
@@ -58,6 +66,9 @@ const Index: NextPage = () => {
                             <MenuItem onClick={() => router.push("/guitar")}  color={"heading"}>Guitar</MenuItem>
                             <MenuItem onClick={() => router.push("/paino")}  color={"heading"}>Paino</MenuItem>
                             <MenuItem onClick={() => router.push("/drums")}  color={"heading"}>Drums</MenuItem>
+                            <MenuItem onClick={() => router.push("/tabla")}  color={"heading"}>Tabla</MenuItem>
+                            <MenuItem onClick={() => router.push("/voilin")}  color={"heading"}>Voilin</MenuItem>
+                            <MenuItem onClick={() => router.push("/logicpro")}  color={"heading"}>Logic Pro</MenuItem>
                         </MenuList>
                     </Menu>
                 </Box>
