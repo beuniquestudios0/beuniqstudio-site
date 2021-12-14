@@ -45,8 +45,8 @@ const HeroCaoursal: React.FC = () => {
                  zIndex={2}
                  width={"100%"}
             >
-                <Flex justifyContent={"center"} gridGap={[".5rem","1rem"]} alignItems={"center"} flexDirection={"column"} color={"white"}>
-                    <Heading as={"h1"} fontWeight={"bold"} size={headingSize}>Music For Everyone</Heading>
+                <Flex justifyContent={"center"} gridGap={[".5rem","1rem"]} textAlign={"center"} alignItems={"center"} flexDirection={"column"} color={"white"}>
+                    <Heading as={"h1"} fontWeight={"bold"} size={headingSize}>BeUnique Music Academy</Heading>
                     <Text fontSize={textSize}>Awaken the possibility</Text>
                     <Button colorScheme={"yellow"} size={buttonSize} onClick={() => router.push("/booking")} variant={"solid"}>Start Learning</Button>
                 </Flex>

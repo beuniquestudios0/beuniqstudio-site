@@ -22,8 +22,8 @@ const Home: NextPage = () => {
   return (
     <Box>
       <Head>
-        <title>John Sede</title>
-        <meta name="description" content="John sede" />
+        <title>BeUnique Studios</title>
+        <meta name="description" content="Be Unique Studios" />
       </Head>
       <Hero/>
       <PrivateLesson/>

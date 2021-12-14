@@ -201,7 +201,7 @@ const  JoinOurTeam = () => {
                         fontSize={{ base: '3xl', sm: '4xl', md: '5xl', lg: '6xl' }}>
                         Join the BeUnique family now.
                     </Heading>
-                    <Text fontSize={fontSize}>Join 100+ students learning music for the best instructors, with 1:1 teaching.</Text>
+                    <Text fontSize={fontSize}>Join 100+ students learning music from the best instructors, with 1:1 teaching.</Text>
                     <Stack direction={'row'} spacing={4} align={'center'}>
                         <AvatarGroup>
                             {avatars.map((avatar) => (
@@ -324,7 +324,7 @@ const  JoinOurTeam = () => {
                             />
                             <Text>Select Your Instrument</Text>
                             <Flex gridGap={"10px"} flexWrap={"wrap"} {...group}>
-                                {["Guitar", "Drums", "Paino", "Voilin", "Tabla", "Logic Pro"].map((value) => {
+                                {["Guitar", "Drums", "Paino", "Voilin", "Tabla", "Logic Pro", "Cinematic Vocal", "Western Vocal"].map((value) => {
                                     const radio = getRadioProps({ value })
                                     return (
                                         <RadioCard key={value} {...radio}>

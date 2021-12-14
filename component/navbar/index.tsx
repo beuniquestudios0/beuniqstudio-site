@@ -43,9 +43,10 @@ const Index: NextPage = () => {
 
     return <>
         <Flex zIndex={50} position={{base:"relative", lg: "absolute"}} w={"100%"} bg={{base: "brandPrimary.400", lg:"transparent"}} alignItems={"center"} justify={"space-between"} p={"1rem"}>
-            <Box w={["50px", "80px"]} h={["50px", "80px"]}>
+            <Flex flexDirection={"column"} w={["50px", "80px"]} h={["50px", "80px"]}>
                 <Image src={"https://i.ibb.co/RNF7gR7/LOGO.png"} width={"100%"} height={"100%"} filter={"brightness(0) invert(1)"}/>
-            </Box>
+                <Text fontSize={"xs"} color={"white"}>(Since 2016)</Text>
+            </Flex>
             <Flex d={{base:"flex", lg: "none"}} alignItems={"center"} gridGap={"1rem"}>
                 <BaseNavbar/>
             </Flex>
@@ -68,7 +69,9 @@ const Index: NextPage = () => {
                             <MenuItem onClick={() => router.push("/drums")}  color={"heading"}>Drums</MenuItem>
                             <MenuItem onClick={() => router.push("/tabla")}  color={"heading"}>Tabla</MenuItem>
                             <MenuItem onClick={() => router.push("/voilin")}  color={"heading"}>Voilin</MenuItem>
-                            <MenuItem onClick={() => router.push("/logicpro")}  color={"heading"}>Logic Pro</MenuItem>
+                            <MenuItem onClick={() => router.push("/logicpro")}  color={"heading"}>Music Production In Logic Pro</MenuItem>
+                            <MenuItem onClick={() => router.push("/cinematicvocal")}  color={"heading"}>Cinematic Vocals</MenuItem>
+                            <MenuItem onClick={() => router.push("/westernvocal")}  color={"heading"}>Western Vocals</MenuItem>
                         </MenuList>
                     </Menu>
                 </Box>

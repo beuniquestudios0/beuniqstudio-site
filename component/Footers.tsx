@@ -60,6 +60,16 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 export default function Footer() {
     const router = useRouter();
 
+    const redirectToSocialHandles = (type: string) => {
+        const socials = {
+            instagram: "https://instagram.com/beunique_studios",
+            youtube: "https://youtube.com/c//beuniquestudios"
+        }
+
+        // @ts-ignore
+        window.location.href = socials[type];
+    }
+
     return (
         <Box
             bg={useColorModeValue('gray.50', 'gray.900')}
@@ -78,14 +88,11 @@ export default function Footer() {
                             © {new Date().getFullYear()} BeUnique Studios. All rights reserved
                         </Text>
                         <Stack direction={'row'} spacing={6}>
-                            <SocialButton label={'Twitter'} href={'#'}>
-                                <FaTwitter />
-                            </SocialButton>
                             <SocialButton label={'YouTube'} href={'#'}>
-                                <FaYoutube />
+                                <FaYoutube onClick={() => redirectToSocialHandles("youtube")} />
                             </SocialButton>
                             <SocialButton label={'Instagram'} href={'#'}>
-                                <FaInstagram />
+                                <FaInstagram  onClick={() => redirectToSocialHandles("instagram")} />
                             </SocialButton>
                         </Stack>
                     </Stack>
@@ -94,19 +101,15 @@ export default function Footer() {
                         <List spacing={3}>
                             <ListItem>
                                 <ListIcon as={GrLocation} color="green.500" />
-                                no 21, 34th cross JP nagar, near Jp nagar, bangalore: 560023
+                                No 32, Manjunatha Nilaya, 16th A main, NS Palya, BTM 2nd Stage, Bangalore - 560076.
                             </ListItem>
                             <ListItem>
                                 <ListIcon as={GrMailOption} color="green.500" />
-                                beuniquestudios@gmail.com
+                                beuniquestudios0@gmail.com
                             </ListItem>
                             <ListItem>
                                 <ListIcon as={GrPhone} color="green.500" />
-                                + 91 90000 00000
-                            </ListItem>
-                            <ListItem>
-                                <ListIcon as={GrPhone} color="green.500" />
-                                + 91 90000 00000
+                                + 91 84131 36437
                             </ListItem>
                         </List>
                     </Stack>

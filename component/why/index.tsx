@@ -57,9 +57,11 @@ const Why: NextPage = ( ) => {
                         height: "100%"
                     }} />
                 </Box>
-                <Heading as={"h4"} size={"md"}textAlign={"center"}> SYLLABUS | SYSTEMS</Heading>
+                <Heading as={"h4"} size={"md"}textAlign={"center"}> CERTIFIED TRAINING</Heading>
                 <Text fontSize={"md"} textAlign={"center"}>
-                    Our comprehensive syllabus, skill maps and lesson delivery have produced a large number of pro musicians. Unique automated systems and processes track every class to maintain quality. Level Checks, Quarterly Reports - these frequent assessments ensure students make real progress.
+                    Our comprehensive syllabus, skill maps and lesson delivery have produced a large number of pro musicians.
+                    We provide <strong>Certification & Training for Trinity college of london</strong> and our processes track every class to maintain quality.
+                    Level Checks, Quarterly Reports - these frequent assessments ensure students make real progress.
                 </Text>
             </Flex>
         </Grid>

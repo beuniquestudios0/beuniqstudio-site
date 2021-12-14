@@ -66,8 +66,8 @@ const ServiceCards: React.FC<{title: string; src: string; time: string[], path: 
                         </Thead>
                         <Tbody>
                             <Tr>
-                                <Td>Mon - Fri</Td>
-                                <Td>2 Hours</Td>
+                                <Td>Everyday</Td>
+                                <Td>1 Hours</Td>
                             </Tr>
                         </Tbody>
                     </Table>

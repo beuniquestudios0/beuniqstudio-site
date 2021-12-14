@@ -8,7 +8,7 @@ import {
     Stack,
     Icon,
     useColorModeValue,
-    createIcon,
+    createIcon, Flex, Grid,
 } from '@chakra-ui/react';
 import {useRouter} from "next/router";
 
@@ -22,64 +22,82 @@ export default function HeroText() {
                     rel="stylesheet"
                 />
             </Head>
+            <Box
+                py={{ base: "4rem", md: "6rem" }}
+            >
 
-            <Container maxW={'3xl'}>
-                <Stack
-                    as={Box}
-                    textAlign={'center'}
-                    spacing={{ base: 8, md: 14 }}
-                    py={{ base: 20, md: 36 }}>
-                    <Heading
-                        fontWeight={600}
-                        fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-                        lineHeight={'110%'}>
-                        Learn music through <br />
-                        <Text as={'span'} color={'brandPrimary.500'}>
-                            1:1 tailor made music classes
-                        </Text>
-                    </Heading>
-                    <Text color={'gray.500'}>
-                        BeUnique Academy faculty are performing musicians who use customized 'deep & wide' curriculum and methods to help you learn music. With structure, performance, fun - and inspiration.
-                    </Text>
+                <Container maxW={'3xl'}>
                     <Stack
-                        direction={'column'}
-                        spacing={3}
-                        align={'center'}
-                        alignSelf={'center'}
-                        position={'relative'}>
-                        <Button
-                            colorScheme={'brandPrimary'}
-                            rounded={'full'}
-                            px={6}
-                            _hover={{
-                                bg: 'brandPrimary.700',
-                            }}
-                            onClick={() => router.push("/booking")}
-                        >
-                            Get Started
-                        </Button>
-                        <Box>
-                            <Icon
-                                as={Arrow}
-                                color={useColorModeValue('gray.800', 'gray.300')}
-                                w={71}
-                                position={'absolute'}
-                                right={-71}
-                                top={'10px'}
-                            />
-                            <Text
-                                fontSize={'lg'}
-                                fontFamily={'Caveat'}
-                                position={'absolute'}
-                                right={'-100px'}
-                                top={'-15px'}
-                                transform={'rotate(10deg)'}>
-                                Click here
+                        as={Box}
+                        textAlign={'center'}
+                        spacing={{ base: 8, md: 14 }}
+                        py={{ base: 5, md: 10 }}>
+                        <Heading
+                            fontWeight={600}
+                            fontSize={{ base: '2xl', sm: '4xl', md: '5xl' }}
+                            lineHeight={'110%'}>
+                            Learn music through certified<br />
+                            <Text as={'span'} color={'brandPrimary.500'}>
+                                1:1 tailor made music classes
                             </Text>
-                        </Box>
+                        </Heading>
+                        <Text color={'gray.500'}>
+                            BeUnique Academy faculty are performing musicians who use customized 'deep & wide' curriculum and methods to help you learn music. With structure, performance, fun - and inspiration.
+                        </Text>
+                        <Stack
+                            direction={'column'}
+                            spacing={3}
+                            align={'center'}
+                            alignSelf={'center'}
+                            position={'relative'}>
+                            <Button
+                                colorScheme={'brandPrimary'}
+                                rounded={'full'}
+                                px={6}
+                                _hover={{
+                                    bg: 'brandPrimary.700',
+                                }}
+                                onClick={() => router.push("/booking")}
+                            >
+                                Get Started
+                            </Button>
+                            <Box>
+                                <Icon
+                                    as={Arrow}
+                                    color={useColorModeValue('gray.800', 'gray.300')}
+                                    w={71}
+                                    position={'absolute'}
+                                    right={-71}
+                                    top={'10px'}
+                                />
+                                <Text
+                                    fontSize={'lg'}
+                                    fontFamily={'Caveat'}
+                                    position={'absolute'}
+                                    right={'-100px'}
+                                    top={'-15px'}
+                                    transform={'rotate(10deg)'}>
+                                    Click here
+                                </Text>
+                            </Box>
+                        </Stack>
                     </Stack>
-                </Stack>
-            </Container>
+                </Container>
+                <Container maxW={"container.lg"}>
+                    <Grid gridTemplateColumns={{base: "repeat(1, 1fr)", md: "repeat(3, 1fr)"}} textAlign={"center"} gridGap={"10px"}>
+                        <Box bg={"white"} borderRadius={"10px"} boxShadow={"md"} border={"1px"} borderColor={"brandPrimary.500"} px={"2rem"} py={"1rem"}>
+                            <Text fontWeight={"medium"}>Each class duration will be of 1 hour.</Text>
+                        </Box>
+                        <Box bg={"white"} borderRadius={"10px"} boxShadow={"md"} border={"1px"} borderColor={"brandPrimary.500"} px={"2rem"} py={"1rem"}>
+                            <Text fontWeight={"medium"}>We provide instruments for students.</Text>
+                        </Box>
+                        <Box bg={"white"} borderRadius={"10px"} boxShadow={"md"} border={"1px"} borderColor={"brandPrimary.500"} px={"2rem"} py={"1rem"}>
+                            <Text fontWeight={"medium"}>We train students for the exam of Trinity college of London.</Text>
+                        </Box>
+                    </Grid>
+                </Container>
+
+            </Box>
         </>
     );
 }

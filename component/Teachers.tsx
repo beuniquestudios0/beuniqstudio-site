@@ -95,53 +95,37 @@ export default function TeachersList() {
                 </Stack>
                 <Stack
                     direction={{ base: 'column', md: 'row' }}
-                    spacing={{ base: 10, md: 4, lg: 10 }}>
+                    spacing={{ base: 10, md: 4, lg: 10 }}
+                    justifyContent={"center"}
+                >
                     <Teachers>
                         <TeachersContent>
                             <TeachersHeading>Guitar Instructor</TeachersHeading>
                             <TeachersText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                                neque sed imperdiet nibh lectus feugiat nunc sem.
+                                Sumantha Biswas is a guitar instructor with 8 years of experience.
                             </TeachersText>
                         </TeachersContent>
                         <TeachersAvatar
                             src={
                                 'https://images.unsplash.com/photo-1598728637989-9c5de7532584?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
                             }
-                            name={'John Bosco'}
-                            title={'CEO at Be Unique Studios'}
+                            name={'Sumantha Biswas'}
+                            title={'Music Teacher at DPS'}
                         />
                     </Teachers>
                     <Teachers>
                         <TeachersContent>
-                            <TeachersHeading>Paino Instructor</TeachersHeading>
+                            <TeachersHeading>Keyboard Instructor</TeachersHeading>
                             <TeachersText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                                neque sed imperdiet nibh lectus feugiat nunc sem.
+                                Anthony Bhaskar is a keyboard instructor with 6 years of experience.
                             </TeachersText>
                         </TeachersContent>
                         <TeachersAvatar
                             src={
                                 'https://images.unsplash.com/photo-1511551203524-9a24350a5771?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80'
                             }
-                            name={'John Bosco'}
-                            title={'CEO at Be Unique Studios'}
-                        />
-                    </Teachers>
-                    <Teachers>
-                        <TeachersContent>
-                            <TeachersHeading>Drums Instructor</TeachersHeading>
-                            <TeachersText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                                neque sed imperdiet nibh lectus feugiat nunc sem.
-                            </TeachersText>
-                        </TeachersContent>
-                        <TeachersAvatar
-                            src={
-                                'https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=881&q=80'
-                            }
-                            name={'John Bosco'}
-                            title={'CEO at Be Unique Studios'}
+                            name={'Anthony Bhaskar'}
+                            title={'Music Teacher at DPS'}
                         />
                     </Teachers>
                 </Stack>
