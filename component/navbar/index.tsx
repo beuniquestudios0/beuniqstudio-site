@@ -59,6 +59,13 @@ const Index: NextPage = () => {
                    </Link>
                 </Box>
                 <Box transition={"all .3s linear"} _hover={{bg:"brandPrimary.50", color:"brandPrimary.600"}} cursor={"pointer"} borderRadius={"6px"} px={"1rem"} py={".5rem"}>
+                   <Link href={"/careers"}>
+                        <Text fontWeight={"semibold"} fontSize={"lg"}>
+                            Career
+                        </Text>
+                   </Link>
+                </Box>
+                <Box transition={"all .3s linear"} _hover={{bg:"brandPrimary.50", color:"brandPrimary.600"}} cursor={"pointer"} borderRadius={"6px"} px={"1rem"} py={".5rem"}>
                     <Menu>
                         <MenuButton as={Text} fontWeight={"semibold"}>
                             Our Training

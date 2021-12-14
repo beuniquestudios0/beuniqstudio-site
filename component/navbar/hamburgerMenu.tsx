@@ -43,6 +43,13 @@ const HamburgerMenu: NextPage<{isOpen: boolean, onClose: () => void}> = ({isOpen
                             </Text>
                         </Link>
                     </Box>
+                    <Box _active={{bg:"brandPrimary.50", color:"brandPrimary.600"}} borderRadius={"6px"} p={".5rem"}>
+                        <Link href={"/careers"}>
+                            <Text fontWeight={"semibold"} fontSize={"lg"}>
+                                Career
+                            </Text>
+                        </Link>
+                    </Box>
                 </Flex>
 
                 <Button onClick={() => router.push("/booking")} mt={"1rem"} w={"100%"} colorScheme={"brandPrimary"}>Book your seat now</Button>
