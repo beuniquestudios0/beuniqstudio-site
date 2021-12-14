@@ -4,7 +4,7 @@ import {useRouter} from "next/router";
 const PrivateLesson = () => {
     const router = useRouter()
     return <>
-    <Flex gridGap={".3rem"} bg={"brandPrimary.400"} color={"white"} h={"100%"} padding={"2rem 0"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-evenly"}>
+    <Flex gridGap={".3rem"} background={"linear-gradient( 135deg, #F761A1 10%, #8C1BAB 100%)"} color={"white"} h={"100%"} padding={"2rem 0"} flexWrap={"wrap"} alignItems={"center"} justifyContent={"space-evenly"}>
         <Heading>
             Private Lessons
         </Heading>
