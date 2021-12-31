@@ -64,17 +64,14 @@ const TeachersText = ({ children }: { children: ReactNode }) => {
 };
 
 const TeachersAvatar = ({
-                               src,
                                name,
                                title,
                            }: {
-    src: string;
     name: string;
     title: string;
 }) => {
     return (
         <Flex align={'center'} mt={8} direction={'column'}>
-            <Avatar src={src} alt={name} mb={2} />
             <Stack spacing={-1} align={'center'}>
                 <Text fontWeight={600}>{name}</Text>
                 <Text fontSize={'sm'} color={useColorModeValue('gray.600', 'gray.400')}>
@@ -106,9 +103,6 @@ export default function TeachersList() {
                             </TeachersText>
                         </TeachersContent>
                         <TeachersAvatar
-                            src={
-                                'https://images.unsplash.com/photo-1598728637989-9c5de7532584?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
-                            }
                             name={'Sumantha Biswas'}
                             title={'Music Teacher at DPS'}
                         />
@@ -121,9 +115,6 @@ export default function TeachersList() {
                             </TeachersText>
                         </TeachersContent>
                         <TeachersAvatar
-                            src={
-                                'https://images.unsplash.com/photo-1511551203524-9a24350a5771?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80'
-                            }
                             name={'Anthony Bhaskar'}
                             title={'Music Teacher at DPS'}
                         />

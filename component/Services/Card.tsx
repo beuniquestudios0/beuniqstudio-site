@@ -4,22 +4,21 @@ import {
     Heading,
     Text,
     Stack,
-    Avatar,
     Image,
-    useColorModeValue, UnorderedList, ListItem,
+    useColorModeValue,
     Table,
     Thead,
     Tbody,
-    Tfoot,
     Tr,
     Th,
-    Td,
-    TableCaption, Button,
+    Td, Flex, Button,
 } from '@chakra-ui/react';
 import React from "react";
 import {useRouter} from "next/router";
+import {BsCalendar3} from "react-icons/bs";
+import {BiTimeFive} from "react-icons/bi";
 
-const ServiceCards: React.FC<{title: string; src: string; time: string[], path: string}> = (props) => {
+const ServiceCards: React.FC<{title: string; src: string; time: string[]}> = (props) => {
     const router = useRouter();
     return (
         <Center py={6}>
@@ -54,27 +53,20 @@ const ServiceCards: React.FC<{title: string; src: string; time: string[], path: 
                         fontFamily={'body'}>
                         {props.title}
                     </Heading>
-                    <Text color={'gray.500'}>
-                        Class Timings
-                    </Text>
-                    <Table size="sm">
-                        <Thead>
-                            <Tr>
-                                <Th>Days</Th>
-                                <Th>Hours</Th>
-                            </Tr>
-                        </Thead>
-                        <Tbody>
-                            <Tr>
-                                <Td>Everyday</Td>
-                                <Td>1 Hours</Td>
-                            </Tr>
-                        </Tbody>
-                    </Table>
+                    <Flex flexDirection={"column"} color={"brandPrimary.500"} fontWeight={"semibold"}>
+                        <Flex alignItems={"center"} gridGap={"10px"}>
+                            <BsCalendar3 />
+                            <Text color={"gray.600"}>Everyday</Text>
+                        </Flex>
+                        <Flex alignItems={"center"} gridGap={"10px"}>
+                            <BiTimeFive/>
+                            <Text color={"gray.600"}>1 Hour</Text>
+                        </Flex>
+                    </Flex>
+                    <Center>
+                        <Button onClick={() => router.push(`/booking`)} variant={"outline"} size={"sm"}  colorScheme={"brandPrimary"}>Book your seat now</Button>
+                    </Center>
                 </Stack>
-                <Center>
-                    <Button onClick={() => router.push(`/${props.path}`)} margin={"1rem 0"} variant={"outline"} size={"sm"}  colorScheme={"brandPrimary"}>Explore</Button>
-                </Center>
             </Box>
         </Center>
     );

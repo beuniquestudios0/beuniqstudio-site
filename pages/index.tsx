@@ -29,7 +29,6 @@ const Home: NextPage = () => {
       <PrivateLesson/>
       <SummerCamp/>
       <Services/>
-      <MusicGroups/>
       <Why/>
       <TeachersList/>
       <Footer/>

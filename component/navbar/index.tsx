@@ -6,7 +6,7 @@ import {
     MenuButton,
     MenuList,
     MenuItem,
-    useDisclosure, Button, IconButton
+    useDisclosure, Button, IconButton, useBreakpointValue
 } from "@chakra-ui/react";
 import React, {useEffect} from "react";
 import {useRouter} from "next/router";
@@ -41,11 +41,13 @@ const BaseNavbar = () => {
 const Index: NextPage = () => {
     const router = useRouter();
 
+    const logoText = useBreakpointValue({base: "5px", md: "xs"})
+
     return <>
         <Flex zIndex={50} position={{base:"relative", lg: "absolute"}} w={"100%"} bg={{base: "brandPrimary.400", lg:"transparent"}} alignItems={"center"} justify={"space-between"} p={"1rem"}>
             <Flex flexDirection={"column"} w={["50px", "80px"]} h={["50px", "80px"]}>
                 <Image src={"https://i.ibb.co/RNF7gR7/LOGO.png"} width={"100%"} height={"100%"} filter={"brightness(0) invert(1)"}/>
-                <Text fontSize={"xs"} color={"white"}>(Since 2016)</Text>
+                <Text fontSize={logoText} color={"white"}>(Since 2016)</Text>
             </Flex>
             <Flex d={{base:"flex", lg: "none"}} alignItems={"center"} gridGap={"1rem"}>
                 <BaseNavbar/>
@@ -64,23 +66,6 @@ const Index: NextPage = () => {
                             Career
                         </Text>
                    </Link>
-                </Box>
-                <Box transition={"all .3s linear"} _hover={{bg:"brandPrimary.50", color:"brandPrimary.600"}} cursor={"pointer"} borderRadius={"6px"} px={"1rem"} py={".5rem"}>
-                    <Menu>
-                        <MenuButton as={Text} fontWeight={"semibold"}>
-                            Our Training
-                        </MenuButton>
-                        <MenuList>
-                            <MenuItem onClick={() => router.push("/guitar")}  color={"heading"}>Guitar</MenuItem>
-                            <MenuItem onClick={() => router.push("/paino")}  color={"heading"}>Paino</MenuItem>
-                            <MenuItem onClick={() => router.push("/drums")}  color={"heading"}>Drums</MenuItem>
-                            <MenuItem onClick={() => router.push("/tabla")}  color={"heading"}>Tabla</MenuItem>
-                            <MenuItem onClick={() => router.push("/voilin")}  color={"heading"}>Voilin</MenuItem>
-                            <MenuItem onClick={() => router.push("/logicpro")}  color={"heading"}>Music Production In Logic Pro</MenuItem>
-                            <MenuItem onClick={() => router.push("/cinematicvocal")}  color={"heading"}>Cinematic Vocals</MenuItem>
-                            <MenuItem onClick={() => router.push("/westernvocal")}  color={"heading"}>Western Vocals</MenuItem>
-                        </MenuList>
-                    </Menu>
                 </Box>
 
                 <Button colorScheme={"brandPrimary"} size={"lg"} onClick={() => router.push("/booking")}
