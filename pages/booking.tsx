@@ -324,7 +324,7 @@ const  JoinOurTeam = () => {
                             />
                             <Text>Select Your Instrument</Text>
                             <Flex gridGap={"10px"} flexWrap={"wrap"} {...group}>
-                                {["Guitar", "Drums", "Paino", "Voilin", "Tabla", "Logic Pro", "Cinematic Vocal", "Western Vocal"].map((value) => {
+                                {["Guitar", "Drums", "Paino", "Voilin", "Tabla", "Logic Pro", "Vocals"].map((value) => {
                                     const radio = getRadioProps({ value })
                                     return (
                                         <RadioCard key={value} {...radio}>
