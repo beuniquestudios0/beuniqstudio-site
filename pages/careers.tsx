@@ -24,15 +24,17 @@ import {
 } from '@chakra-ui/react';
 import {useRadioGroup} from "@chakra-ui/radio";
 import {AiOutlineArrowLeft} from "react-icons/ai";
-import React, {LegacyRef, ReactNode, SyntheticEvent, useState} from "react";
-import supabase from "../supabase";
+import axios from "axios";
+import React, {useState} from "react";
 import Lottie from "react-lottie";
-import animationData from "assets/lottie/success_lottie.json";
 import {useRouter} from "next/router";
 
+// ASSET
+import animationData from "assets/lottie/success_lottie.json";
 
-// COMPONENTS
-import RadioCard from "component/ServiceRadio";
+
+// CONFIGS
+import supabase from "../supabase";
 
 const avatars = [
     {
@@ -80,17 +82,8 @@ const  JoinOurTeam = () => {
     const router = useRouter();
 
 
-
     const size = useBreakpointValue({ base: 'md', md: 'lg' });
 
-
-    const { getRootProps, getRadioProps } = useRadioGroup({
-        name: "framework",
-        defaultValue: "react",
-        onChange: (instrument: string) => setUser((user: USER) => ({...user, instrument})),
-    })
-
-    const group = getRootProps();
     const defaultOptions = {
         loop: true,
         autoplay: true,
@@ -153,6 +146,12 @@ const  JoinOurTeam = () => {
                 resume: ""
             });
             onOpen();
+
+            await axios({
+                method: "POST",
+                url: "/api/mail",
+                data: {type: "Instructor"}
+            })
 
 
         }catch (error: any){

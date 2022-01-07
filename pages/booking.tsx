@@ -34,6 +34,10 @@ import {useRouter} from "next/router";
 // COMPONENTS
 import RadioCard from "component/ServiceRadio";
 
+// CONFIGS
+import {sendMail} from "../configs/mail";
+import axios from "axios";
+
 const avatars = [
     {
         name: 'Ryan Florence',
@@ -150,6 +154,11 @@ const  JoinOurTeam = () => {
                 instrument:"Guitar"
             });
             onOpen();
+            await axios({
+                method: "POST",
+                url: "/api/mail",
+                data: {type: "User"}
+            })
 
         }catch (error: any){
             toast({
