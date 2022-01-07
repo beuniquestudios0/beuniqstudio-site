@@ -17,7 +17,7 @@ AWS.config.update({
 const getParams = (type: "User" | "Instructor") => ( {
     Destination: {
         ToAddresses: [
-            "kppavu@gmail.com"
+            "beuniquestudios0@gmail.com"
         ]
     },
     Message: {
