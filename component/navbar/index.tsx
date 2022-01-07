@@ -38,7 +38,7 @@ const BaseNavbar = () => {
 }
 
 
-const Index: NextPage = () => {
+const Index: NextPage<{isAdmin?:boolean}> = ({isAdmin}) => {
     const router = useRouter();
 
     const logoText = useBreakpointValue({base: "5px", md: "xs"})
@@ -46,8 +46,8 @@ const Index: NextPage = () => {
     return <>
         <Flex zIndex={50} position={{base:"relative", lg: "absolute"}} w={"100%"} bg={{base: "brandPrimary.400", lg:"transparent"}} alignItems={"center"} justify={"space-between"} p={"1rem"}>
             <Flex flexDirection={"column"} w={["50px", "80px"]} h={["50px", "80px"]}>
-                <Image src={"https://i.ibb.co/RNF7gR7/LOGO.png"} width={"100%"} height={"100%"} filter={"brightness(0) invert(1)"}/>
-                <Text fontSize={logoText} color={"white"}>(Since 2016)</Text>
+                <Image src={"https://i.ibb.co/RNF7gR7/LOGO.png"} width={"100%"} height={"100%"} filter={`brightness(0) invert(${isAdmin ? 0 : 1})`}/>
+                <Text fontSize={logoText} color={isAdmin ? "gray.700" : "white"}>(Since 2016)</Text>
             </Flex>
             <Flex d={{base:"flex", lg: "none"}} alignItems={"center"} gridGap={"1rem"}>
                 <BaseNavbar/>
@@ -68,8 +68,8 @@ const Index: NextPage = () => {
                    </Link>
                 </Box>
 
-                <Button colorScheme={"brandPrimary"} size={"lg"} onClick={() => router.push("/booking")}
-                > Book your seat now </Button>
+                {!isAdmin &&  <Button colorScheme={"brandPrimary"} size={"lg"} onClick={() => router.push("/booking")}
+                > Book your seat now </Button>}
 
             </Flex>
         </Flex>

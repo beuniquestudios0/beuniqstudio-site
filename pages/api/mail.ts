@@ -17,19 +17,19 @@ AWS.config.update({
 const getParams = (type: "User" | "Instructor") => ( {
     Destination: {
         ToAddresses: [
-            "beuniquestudios0@gmail.com"
+            "kppavu@gmail.com"
         ]
     },
     Message: {
         Body: {
             Text: {
                 Charset: "UTF-8",
-                Data: `Hey John new registration recieved check ${type} DB`
+                Data: `Hey John new registration recieved check ${type} DB, , access the list here https://beuniqestudios.com/admin/${type.toLocaleLowerCase()}`
             }
         },
         Subject: {
             Charset: 'UTF-8',
-            Data: `New registration for ${type} received `
+            Data: `New registration for ${type} received`
         }
     },
     Source: `prideproject01@gmail.com`,
