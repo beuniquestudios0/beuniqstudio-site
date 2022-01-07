@@ -157,7 +157,7 @@ const Admin: NextPage = () => {
                             <Tbody>
                                 {list.users.length > 0 && list.users.map((user: any) => {
                                     const date = new Date(user.created_at);
-                                    return <Tr>
+                                    return <Tr key={user.id}>
                                         <Td>{user.id}</Td>
                                         <Td>{user.fullname}</Td>
                                         <Td>
@@ -190,7 +190,7 @@ const Admin: NextPage = () => {
                             <Tbody>
                                 {list.instructors.length > 0 && list.instructors.map((user: any) => {
                                     const date = new Date(user.created_at);
-                                    return <Tr>
+                                    return <Tr key={user.id}>
                                         <Td>{user.id}</Td>
                                         <Td>{user.fullname}</Td>
                                         <Td>
