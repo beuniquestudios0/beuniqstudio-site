@@ -9,8 +9,8 @@ import {CloneReceiptRuleSetCommand, SendRawEmailCommand, SESClient} from '@aws-s
 AWS.config.update({
     region: 'ap-south-1',
     credentials: {
-        accessKeyId: process.env.AWS_ACCESS_KEY as string,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY as string,
+        accessKeyId: process.env.BEU_AWS_ACCESS_KEY as string,
+        secretAccessKey: process.env.BEU_AWS_SECRET_ACCESS_KEY as string,
     },
 });
 
