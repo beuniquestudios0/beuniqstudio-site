@@ -89,9 +89,6 @@ export default function HeroText() {
                             <Text fontWeight={"medium"}>Each class duration will be of 1 hour.</Text>
                         </Box>
                         <Box bg={"white"} borderRadius={"10px"} boxShadow={"md"} border={"1px"} borderColor={"brandPrimary.500"} px={"2rem"} py={"1rem"}>
-                            <Text fontWeight={"medium"}>We provide instruments for students.</Text>
-                        </Box>
-                        <Box bg={"white"} borderRadius={"10px"} boxShadow={"md"} border={"1px"} borderColor={"brandPrimary.500"} px={"2rem"} py={"1rem"}>
                             <Text fontWeight={"medium"}>We train students for the exam of Trinity college London.</Text>
                         </Box>
                     </Grid>
