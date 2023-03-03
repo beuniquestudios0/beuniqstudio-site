@@ -20,6 +20,8 @@ const Gallery = () => {
                 <Item url={'https://images.weserv.nl/?url=https://nonceblox.s3.ap-south-1.amazonaws.com/3.jpeg'} />
                 <Item url={'https://images.weserv.nl/?url=https://nonceblox.s3.ap-south-1.amazonaws.com/4.jpeg'} />
                 <Item url={'https://nonceblox.s3.ap-south-1.amazonaws.com/john_video.mp4'} isVideo />
+                <Item url={'https://nonceblox.s3.ap-south-1.amazonaws.com/VID-20230303-WA0001.mp4'} isVideo />
+                <Item url={'https://nonceblox.s3.ap-south-1.amazonaws.com/VID-20230303-WA0002.mp4'} isVideo />
 
             </Grid>
 
